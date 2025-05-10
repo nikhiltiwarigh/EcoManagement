@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Management - Login & Sign Up</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9; /* Light green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .failmsg{
+            color: red;
+            margin-right: 50px;
+        }
+
+        a {
+            color: #388e3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #error-message, #signup-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+        #signup-message {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <!-- Login Form -->
+        <h2>Login to Eco Management</h2>
+        <form id="loginForm" action="LoginChecker" method="post">
+            <input type="text" id="login-username" name="username" placeholder="Enter Username" required>
+            <input type="password" id="login-password" name="password" placeholder="Enter Password" required>
+            <p class="failmsg">username or password may incorrect try again.</p>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="registration.html">Sign Up</a></p>
+    </div>
+<!--
+    <div class="container" id="signupContainer" style="display: none;">
+         Sign Up Form 
+        <h2>Create Your Account</h2>
+        <form id="signupForm">
+            <input type="text" id="signup-username" placeholder="Choose Username" required>
+            <input type="password" id="signup-password" placeholder="Create Password" required>
+            <input type="email" id="signup-email" placeholder="Enter Email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="signup-message"></p>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>-->
+
+<!--    <script>
+        // Show Sign Up Form
+        function showSignUp() {
+            document.getElementById('loginContainer').style.display = 'none';
+            document.getElementById('signupContainer').style.display = 'block';
+        }
+
+        // Show Login Form
+        function showLogin() {
+            document.getElementById('signupContainer').style.display = 'none';
+            document.getElementById('loginContainer').style.display = 'block';
+        }
+
+        // Handle Login Form
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById('login-username').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+
+            const validUsername = "ecoUser";
+            const validPassword = "ecoPass123";
+
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful! Redirecting to Home Page...");
+                window.location.href = "home.html"; // Redirect to home page
+            } else {
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = "Invalid username or password!";
+                errorMessage.style.display = "block";
+            }
+        });
+
+        // Handle Sign Up Form
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById('signup-username').value.trim();
+            const password = document.getElementById('signup-password').value.trim();
+            const email = document.getElementById('signup-email').value.trim();
+
+            if (username && password && email) {
+                const signupMessage = document.getElementById('signup-message');
+                signupMessage.textContent = "Account created successfully! You can now login.";
+                signupMessage.style.display = "block";
+                showLogin(); // Redirect to login form after successful sign-up
+            }
+        });
+    </script>-->
+</body>
+</html>
