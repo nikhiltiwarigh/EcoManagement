@@ -139,7 +139,7 @@
   <h1>Eco Management</h1>
   <nav>
     <a href="admin_home.jsp">Dashboard</a>
-    <a href="#">Settings</a>
+    <a href="setting.jsp">Settings</a>
     <a href="logout.jsp">Logout</a>
   </nav>
 </header>

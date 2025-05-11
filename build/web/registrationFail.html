@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Management - Login & Sign Up</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9; /* Light green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+        }
+
+        .failmsg{
+            color: red;
+            margin-right: 50px;
+        }
+        
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #388e3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #error-message, #signup-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+        #signup-message {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="signupContainer">
+         Sign Up Form 
+        <h2>Create Your Account</h2>
+        <form id="signupForm" action="RegistrationChecker" method="post">
+            <input type="text" name="name" placeholder="Choose Name" required>
+            <input type="text" name="username" placeholder="Choose Username" required>
+            <input type="password" name="password" placeholder="Create Password" required>
+            <input type="text" name="contact" placeholder="Enter Mobile Number" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <input type="text" name="address" placeholder="Enter Address" required>
+            <p class="failmsg">This username already exist try another username.</p>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="signup-message"></p>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>
+

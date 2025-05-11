@@ -43,7 +43,7 @@ public class RegistrationChecker extends HttpServlet
       }
       else
       {
-          resp.sendRedirect("registration.html");
+          resp.sendRedirect("registrationFail.html");
       }
       
     }   
