@@ -1,4 +1,4 @@
-
+//Database connection
 package db;
 
 import java.sql.Connection;
